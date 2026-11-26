@@ -1,368 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arel Yapı | Projelendirme ve Taahhüt</title>
-<meta name="description" content="Arel Yapı; mimari projelendirmeden anahtar teslim inşaata kadar ofis, konut, ticari ve endüstriyel yapılar geliştirir. Kristal Kule, AND Plaza, AND Pastel ve daha fazlası.">
+<meta name="description" content="Arel Yapı, Ataşehir merkezli projelendirme ve taahhüt firması. Kristal Kule, AND Plaza, Maslak 1453 ve Ferrero fabrikası gibi ofis, konut, ticari ve endüstriyel yapılar.">
 <link rel="canonical" href="https://www.arelyapi.net/">
-<meta name="theme-color" content="#fbfbfd">
+<meta name="theme-color" content="#F4F3EF">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:site_name" content="Arel Yapı">
 <meta property="og:title" content="Arel Yapı | Projelendirme ve Taahhüt">
-<meta property="og:description" content="Mimari projelendirmeden anahtar teslim inşaata ofis, konut, ticari ve endüstriyel yapılar.">
-<meta property="og:url" content="https://www.arelyapi.net/">
-<meta property="og:image" content="https://www.arelyapi.net/assets/img/istanbul-silueti-1600.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="Mimari projelendirmeden anahtar teslim inşaata; ofis, konut, ticari ve endüstriyel yapılar.">
+<meta property="og:image" content="assets/img/kristal-kule-1600.jpg">
 <link rel="icon" href="https://arelyapi.net/wp-content/uploads/2025/02/cropped-1-fotor-bg-remover-2025022414462-270x270.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://www.arelyapi.net">
-<link rel="preload" as="image" href="assets/img/istanbul-silueti-1600.webp" imagesrcset="assets/img/istanbul-silueti-960.webp 960w, assets/img/istanbul-silueti-1600.webp 1600w" imagesizes="100vw" type="image/webp">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/kristal-kule-kule-850.webp" type="image/webp">
 <link rel="stylesheet" href="assets/css/arel.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.arelyapi.net/#org",
-      "name": "Arel Yapı",
-      "url": "https://www.arelyapi.net/",
-      "logo": "https://www.arelyapi.net/assets/img/logo@2x.png",
-      "slogan": "Hayata değer katan, değerleri önemsiyoruz.",
-      "telephone": "+90 216 687 15 96",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "İçerenköy Mah. Umut Sok. Quick Tower No:10-12, Kat 16-18",
-        "addressLocality": "Ataşehir",
-        "addressRegion": "İstanbul",
-        "addressCountry": "TR"
-      },
-      "sameAs": ["https://www.instagram.com/arelyapi_/", "https://tr.linkedin.com/company/arelyapi"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.arelyapi.net/#website",
-      "name": "Arel Yapı",
-      "url": "https://www.arelyapi.net/",
-      "inLanguage": "tr-TR",
-      "publisher": { "@id": "https://www.arelyapi.net/#org" }
-    }
-  ]
+  "@type": "GeneralContractor",
+  "name": "Arel Yapı",
+  "url": "https://www.arelyapi.net/",
+  "logo": "https://www.arelyapi.net/assets/img/logo@2x.png",
+  "telephone": "+90 216 687 15 96",
+  "slogan": "Hayata değer katan, değerleri önemsiyoruz.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "İçerenköy Mah. Umut Sok. Quick Tower No:10-12, Kat 16-18",
+    "addressLocality": "Ataşehir",
+    "addressRegion": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "sameAs": ["https://www.instagram.com/arelyapi_/", "https://tr.linkedin.com/company/arelyapi"]
 }
 </script>
 </head>
 <body data-root="">
 <a class="skip" href="#icerik">İçeriğe geç</a>
+<p class="demo-bant">Demo sürümü: bu sitedeki veriler, sayılar ve kişiler kurgudur.</p>
 
 <header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href="index.html" aria-current="page"><img src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo@2x.png 2x" width="101" height="30" alt="Arel Yapı anasayfa"></a>
-    <nav class="nav-links" aria-label="Ana menü">
-      <a href="about-us/index.html">Kurumsal</a>
-      <a href="projeler/index.html">Projeler</a>
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Arel Yapı anasayfa">
+      <img src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo@2x.png 2x" width="320" height="95" alt="Arel Yapı">
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="ana-menu" aria-label="Menüyü aç">
+      <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M2 3h22M2 10h22M2 17h22" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <nav class="nav" id="ana-menu" aria-label="Ana menü">
+      <a href="https://www.arelyapi.net/about-us/">Kurumsal</a>
+      <a href="#projeler">Projeler</a>
       <a href="galeri/index.html">Galeri</a>
-      <a href="surdurulebilirlik/index.html">Sürdürülebilirlik</a>
-      <a href="ilk-adim-programi/index.html">Kariyer</a>
-      <a href="about-us/contact/index.html">İletişim</a>
+      <a href="https://www.arelyapi.net/surdurulebilirlik/">Sürdürülebilirlik</a>
+      <a href="#kariyer">Kariyer</a>
+      <a class="btn btn-primary" href="#iletisim">İletişim</a>
     </nav>
-    <div class="nav-end">
-      <a class="pill" href="about-us/contact/index.html">Bize ulaşın</a>
-      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobil-menu" aria-label="Menüyü aç">
-        <svg class="burger" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7h14M3 13h14"/></svg>
-        <svg class="x" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg>
-      </button>
-    </div>
   </div>
-  <nav class="mobile-menu" id="mobil-menu" aria-label="Mobil menü" hidden>
-    <a href="about-us/index.html">Kurumsal</a>
-    <a href="projeler/index.html">Projeler</a>
-    <a href="galeri/index.html">Galeri</a>
-    <a href="surdurulebilirlik/index.html">Sürdürülebilirlik</a>
-    <a href="ilk-adim-programi/index.html">Kariyer</a>
-    <a href="about-us/contact/index.html">İletişim</a>
-  </nav>
 </header>
 
 <main id="icerik">
 
-  <!-- Giriş -->
-  <section class="home-hero" aria-labelledby="slogan">
-    <div class="hero-bg parallax">
-      <picture>
-        <source type="image/webp" srcset="assets/img/istanbul-silueti-960.webp 960w, assets/img/istanbul-silueti-1600.webp 1600w" sizes="100vw">
-        <img src="assets/img/istanbul-silueti-1600.jpg" width="1600" height="900" alt="Kristal Kule ve çevresindeki yüksek yapılarla İstanbul silueti" fetchpriority="high">
-      </picture>
-    </div>
-    <div class="shade" aria-hidden="true"></div>
-    <div class="wrap hero-content">
-      <h1 id="slogan" class="hero-in">Hayata değer katan, değerleri önemsiyoruz.</h1>
-      <p class="hero-in d1">Mimari projelendirmeden anahtar teslim inşaata; Kristal Kule'den AND Pastel'e ofis, konut, ticari ve endüstriyel yapılar.</p>
-      <div class="actions hero-in d2">
-        <a class="btn btn-light" href="projeler/index.html">Projeleri inceleyin</a>
-        <a class="btn btn-ghost" href="about-us/contact/index.html">Bize ulaşın</a>
+  <section class="hero" aria-labelledby="hero-baslik">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 id="hero-baslik">
+          <span class="visually-hidden">Değer katan ofisler, konutlar, fabrikalar ve alışveriş merkezleri inşa ediyoruz.</span>
+          <span aria-hidden="true">Değer katan <span class="doner"><span id="doner">ofisler</span></span> inşa ediyoruz.</span>
+        </h1>
+        <p class="lead">Hayata değer katan, değerleri önemsiyoruz. Mimari projelendirmeden anahtar teslim inşaata; Kristal Kule, AND Plaza ve Maslak 1453 gibi yapılarda Türkiye'nin önde gelen geliştiricileriyle çalıştık.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projeler">Projeleri inceleyin</a>
+          <a class="btn btn-ghost" href="#iletisim">Bize ulaşın</a>
+        </div>
+        <button class="doner-btn" type="button" id="doner-btn" aria-pressed="false" hidden>Başlık döngüsünü durdur</button>
+      </div>
+      <div class="hero-media">
+        <picture>
+          <source type="image/webp" srcset="assets/img/kristal-kule-kule-425.webp 425w, assets/img/kristal-kule-kule-850.webp 850w" sizes="(max-width: 1020px) 100vw, 50vw">
+          <img src="assets/img/kristal-kule-kule-850.jpg" width="848" height="1348" alt="Kristal Kule, gün batımında altın ışık alan kristal formlu ofis kulesi" fetchpriority="high">
+        </picture>
+        <div class="slats" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="hero-caption">Kristal Kule, İstanbul</p>
       </div>
     </div>
-  </section>
-
-  <!-- Öne çıkan projeler -->
-  <section class="section" aria-labelledby="one-cikan">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="one-cikan" class="section-title">Öne çıkan projeler.</h2>
-        <div class="tabs-scroll">
-          <div class="tabs" role="tablist" aria-label="Öne çıkan projeler">
-            <span class="thumb" aria-hidden="true"></span>
-            <button type="button" role="tab" id="t-kristal" aria-selected="true" aria-controls="p-kristal" data-media="m-kristal">Kristal Kule</button>
-            <button type="button" role="tab" id="t-pastel" aria-selected="false" aria-controls="p-pastel" data-media="m-pastel" tabindex="-1">AND Pastel</button>
-            <button type="button" role="tab" id="t-neva" aria-selected="false" aria-controls="p-neva" data-media="m-neva" tabindex="-1">Nevayalı</button>
-            <button type="button" role="tab" id="t-plaza" aria-selected="false" aria-controls="p-plaza" data-media="m-plaza" tabindex="-1">AND Plaza</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="feature reveal">
-        <div class="feature-text">
-          <div class="panel" role="tabpanel" id="p-kristal" aria-labelledby="t-kristal">
-            <span class="meta">Ofis, İstanbul. Tamamlandı</span>
-            <h3>Kristal Kule</h3>
-            <p>Pei Cobb Freed &amp; Partners tasarımı; iki ofis kulesi, sosyal alanlar ve 5 katlı otopark içeren bir podyumdan oluşur. LEED Silver sertifikalı.</p>
-            <span class="spacer"></span>
-            <a class="more" href="projeler/kristal-kule/index.html">Kristal Kule projesini görün
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
-          </div>
-          <div class="panel" role="tabpanel" id="p-pastel" aria-labelledby="t-pastel" hidden>
-            <span class="meta">Konut, Kartal, İstanbul. Devam ediyor</span>
-            <h3>AND Pastel</h3>
-            <p>AND Gayrimenkul'ün ikinci projesi. Tepe İnşaat ile, yeni nesil mahalle konseptiyle inşa ediliyor.</p>
-            <span class="spacer"></span>
-            <a class="more" href="projeler/and-pastel/index.html">AND Pastel projesini görün
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
-          </div>
-          <div class="panel" role="tabpanel" id="p-neva" aria-labelledby="t-neva" hidden>
-            <span class="meta">Konut, İzmir. Devam ediyor</span>
-            <h3>Nevayalı</h3>
-            <p>İzmir'in merkezinde, doğal çevresiyle bütünleşen ve lüks rezidans yaşamı sunan bir konut projesi.</p>
-            <span class="spacer"></span>
-            <a class="more" href="projeler/nevayali/index.html">Nevayalı projesini görün
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
-          </div>
-          <div class="panel" role="tabpanel" id="p-plaza" aria-labelledby="t-plaza" hidden>
-            <span class="meta">Ofis, Anadolu Yakası, İstanbul. Tamamlandı</span>
-            <h3>AND Plaza</h3>
-            <p>73.325 m² inşaat alanına sahip A+ sınıfı ofis projesi. Tepe İnşaat tarafından anahtar teslim tamamlandı; LEED Platinum sertifikalı.</p>
-            <span class="spacer"></span>
-            <a class="more" href="projeler/and-plaza/index.html">AND Plaza projesini görün
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
-          </div>
-        </div>
-
-        <div class="feature-media">
-          <div class="panel media" id="m-kristal">
-            <picture>
-              <source type="image/webp" srcset="assets/img/kristal-kule-800.webp 800w, assets/img/kristal-kule-1600.webp 1600w" sizes="(min-width: 1120px) 540px, (min-width: 700px) 50vw, 100vw">
-              <img src="assets/img/kristal-kule-1600.jpg" width="1600" height="1348" alt="Kristal Kule'nin cam cepheli iki kulesi" loading="lazy" decoding="async">
-            </picture>
-            <span class="fallback"><b>Kristal Kule</b><span>[Görsel yüklenemedi]</span></span>
-          </div>
-          <div class="panel media" id="m-pastel" hidden>
-            <picture>
-              <source type="image/webp" srcset="assets/img/and-pastel-800.webp 800w, assets/img/and-pastel-1600.webp 1600w" sizes="(min-width: 1120px) 540px, (min-width: 700px) 50vw, 100vw">
-              <img src="assets/img/and-pastel-1600.jpg" width="1600" height="900" alt="AND Pastel yerleşkesinin kuşbakışı görünümü" loading="lazy" decoding="async">
-            </picture>
-            <span class="fallback"><b>AND Pastel</b><span>[Görsel yüklenemedi]</span></span>
-          </div>
-          <div class="panel media" id="m-neva" hidden>
-            <img src="https://www.arelyapi.net/wp-content/uploads/2024/11/1-editAI.jpg.webp" width="1600" height="900" alt="Nevayalı konut projesinin görseli" loading="lazy" decoding="async">
-            <span class="fallback"><b>Nevayalı</b><span>[Görsel yüklenemedi]</span></span>
-          </div>
-          <div class="panel media" id="m-plaza" hidden>
-            <img src="https://www.arelyapi.net/wp-content/uploads/2020/07/and-plaza_1.jpg" width="1600" height="900" alt="AND Plaza ofis binası" loading="lazy" decoding="async">
-            <span class="fallback"><b>AND Plaza</b><span>[Görsel yüklenemedi]</span></span>
-          </div>
-        </div>
+    <div class="kunye-serit">
+      <div class="wrap">
+        <dl>
+          <div><dt>Kuruluş</dt><dd>1998</dd></div>
+          <div><dt>Tamamlanan proje</dt><dd data-count="tamamlanan">10</dd></div>
+          <div><dt>Toplam inşaat alanı</dt><dd>2,2 milyon m²</dd></div>
+          <div><dt>Yeşil bina sertifikası</dt><dd>LEED Platinum, Silver</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- Portföy -->
-  <section class="section" style="padding-top: 0" aria-labelledby="portfoy">
+  <section class="section sektorler" id="sektorler" aria-labelledby="sektor-baslik">
     <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="portfoy" class="section-title">Portföy.</h2>
-        <a class="more" href="galeri/index.html">Tüm projeleri galeride görün
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="sektor-baslik">Ne inşa ediyoruz</h2></div>
+        <p>Altı yapı türünde deneyim. Bir türü seçin, o alandaki projelerimizi görün.</p>
       </div>
-      <div class="grid-3">
-        <a class="tile reveal" href="tamamlanan-projeler/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/kristal-kule-800.webp 800w, assets/img/kristal-kule-1600.webp 1600w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/kristal-kule-1600.jpg" width="1600" height="1348" alt="" loading="lazy" decoding="async"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">Tamamlanan projeler</span>
-            <span class="tile-text">Ofisten fabrikaya, teslim ettiğimiz yapılar.</span>
-            <span class="tile-count">10 proje</span>
-          </span>
-        </a>
-        <a class="tile reveal" href="devam-eden-projeler/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/and-pastel-800.webp 800w, assets/img/and-pastel-1600.webp 1600w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/and-pastel-1600.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">Devam eden projeler</span>
-            <span class="tile-text">Kartal ve İzmir'de yükselen konut projeleri.</span>
-            <span class="tile-count">2 proje</span>
-          </span>
-        </a>
-        <a class="tile reveal" href="yatirim-projeleri/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/istanbul-silueti-960.webp 960w, assets/img/istanbul-silueti-1600.webp 1600w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/istanbul-silueti-1600.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async" style="object-position: 85% center"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">Yatırım projeleri</span>
-            <span class="tile-text">Geleceği inşa eden stratejik adımlar.</span>
-            <span class="tile-count">Çok yakında</span>
-          </span>
-        </a>
+      <ul class="sektor-grid" id="sektor-grid"></ul>
+    </div>
+  </section>
+
+  <section class="section" id="projeler" aria-labelledby="projeler-baslik">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="projeler-baslik">Birlikte inşa ettiklerimiz</h2></div>
+        <p>Ofis kulelerinden toplu konuta, fabrikadan alışveriş merkezine. Her proje, arkasındaki geliştirici ve iş ortağıyla birlikte.</p>
+      </div>
+
+      <div class="featured">
+        <article class="feat feat-a">
+          <a href="galeri/index.html?p=kristal-kule">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/kristal-kule-800.webp 800w, assets/img/kristal-kule-1600.webp 1600w" sizes="(max-width: 1020px) 100vw, 58vw">
+                <img src="assets/img/kristal-kule-1600.jpg" width="1600" height="1348" alt="Kristal Kule'nin iki kulesi, cam cephe" loading="lazy" style="object-position: 25% 50%">
+              </picture>
+              <figcaption class="kredi">Fotoğraf: Koray Group arşivi</figcaption>
+            </figure>
+            <p class="feat-ust"><span class="feat-ad">Kristal Kule</span><span class="durum">Tamamlandı</span></p>
+            <h3>35. katta skygarden, açılır kapanır çatı</h3>
+          </a>
+          <p>Pei Cobb Freed &amp; Partners tasarımı. İki ofis kulesi, sosyal alanlar ve 5 katlı otopark içeren bir podyum. 35. katta skygarden.</p>
+          <dl>
+            <dt>Tür</dt><dd>Ofis</dd>
+            <dt>Konum</dt><dd>İstanbul</dd>
+            <dt>Ortak</dt><dd>Koray Group</dd>
+            <dt>Sertifika</dt><dd>LEED Silver</dd>
+          </dl>
+        </article>
+        <article class="feat feat-b">
+          <a href="galeri/index.html?p=and-pastel">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/and-pastel-800.webp 800w, assets/img/and-pastel-1600.webp 1600w" sizes="(max-width: 1020px) 100vw, 33vw">
+                <img src="assets/img/and-pastel-1600.jpg" width="1600" height="900" alt="AND Pastel konut projesinin havadan görünümü, bloklar ve yeşil teras çatılar" loading="lazy">
+              </picture>
+              <figcaption class="kredi">Fotoğraf: Tepe İnşaat arşivi</figcaption>
+            </figure>
+            <p class="feat-ust"><span class="feat-ad">AND Pastel</span><span class="durum devam">Devam ediyor</span></p>
+            <h3>Kartal'da yeni nesil mahalle</h3>
+          </a>
+          <p>AND Gayrimenkul'ün ikinci projesi. Tepe İnşaat ile, yeni nesil mahalle konseptiyle inşa ediliyor.</p>
+          <dl>
+            <dt>Tür</dt><dd>Konut</dd>
+            <dt>Konum</dt><dd>Kartal, İstanbul</dd>
+            <dt>Ortak</dt><dd>Tepe İnşaat</dd>
+          </dl>
+        </article>
+      </div>
+
+      <div class="dizin" id="dizin">
+        <h3>Tüm projeler</h3>
+        <div class="dizin-head" aria-hidden="true"><span>Proje</span><span>Tür</span><span>Konum</span><span>İş ortağı</span><span>Durum</span></div>
+        <ul class="dizin-list" id="dizin-list">
+          <noscript><li><a href="galeri/index.html"><span class="ad">Projelerin tamamını galeride görün</span></a></li></noscript>
+        </ul>
+        <div class="dizin-onizleme" aria-hidden="true"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="300" height="225"></div>
+        <div class="dizin-foot"><a class="btn btn-ghost" href="galeri/index.html">Galeriyi açın</a></div>
       </div>
     </div>
   </section>
 
-  <!-- Değerler -->
-  <section class="section dark values" aria-labelledby="degerler">
+  <section class="section hizmetler" aria-labelledby="hizmet-baslik">
     <div class="wrap">
-      <h2 id="degerler" class="reveal">Değerlerimiz.</h2>
-      <div class="grid-3">
-        <div class="value reveal">
-          <h3>Doğa</h3>
-          <p>Doğanın en önemli parçamız olduğunu unutmuyoruz.</p>
-        </div>
-        <div class="value reveal">
-          <h3>Uyum</h3>
-          <p>Yaşamın harmonisi ile entegre projeler üretiyoruz.</p>
-        </div>
-        <div class="value reveal">
-          <h3>Kökler</h3>
-          <p>Arel Yapı olarak gücümüzü köklerimizden alıyoruz.</p>
-        </div>
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="hizmet-baslik">Hizmetlerimiz</h2></div>
+        <p>Bir yapının ilk çiziminden teslim gününe kadar aynı ekip.</p>
       </div>
-      <a class="more reveal" href="degerlerimiz/index.html">Değerlerimizi okuyun
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg></a>
-    </div>
-  </section>
-
-  <!-- Hizmetler -->
-  <section class="section" aria-labelledby="hizmetler">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="hizmetler" class="section-title">Hizmetlerimiz.</h2>
-      </div>
-      <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))">
-        <div class="service reveal">
-          <span class="meta">Tasarım ve planlama</span>
-          <h3>Projelendirme</h3>
+      <div class="hizmet-grid">
+        <article class="hizmet">
+          <div><h3>Projelendirme</h3><p class="alt">Tasarım ve planlama</p></div>
           <ul>
             <li>Mimari proje danışmanlığı</li>
             <li>Kentsel tasarım ve planlama</li>
             <li>Statik ve mekanik proje hazırlama</li>
             <li>Peyzaj tasarımı</li>
           </ul>
-        </div>
-        <div class="service reveal">
-          <span class="meta">Uygulama</span>
-          <h3>Taahhüt işleri</h3>
+        </article>
+        <article class="hizmet">
+          <div><h3>Taahhüt</h3><p class="alt">Uygulama</p></div>
           <ul>
             <li>Anahtar teslim inşaat</li>
             <li>Restorasyon ve renovasyon</li>
             <li>Altyapı ve üstyapı işleri</li>
             <li>İç mimari tasarım ve uygulama</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Kariyer -->
-  <section class="section bg-surface" aria-labelledby="kariyer">
+  <section class="section haberler" id="santiyeden" aria-labelledby="haber-baslik">
     <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="kariyer" class="section-title">Kariyer.</h2>
-        <a class="btn btn-navy" href="is-basvurusu/index.html">İş başvurusu yapın</a>
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="haber-baslik">Şantiyeden</h2></div>
+        <a class="btn btn-ghost" href="https://www.instagram.com/arelyapi_/" rel="noopener">Instagram'da izleyin</a>
       </div>
-      <div class="grid-3">
-        <a class="tile reveal" href="firsat-esitligi/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/firsat-esitligi-600.webp 600w, assets/img/firsat-esitligi-1200.webp 1200w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/firsat-esitligi-1200.jpg" width="1200" height="1244" alt="" loading="lazy" decoding="async"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">Fırsat eşitliği</span>
-            <span class="tile-text">Cinsiyet, meslek, yaş, uyruk ve deneyimden bağımsız olarak herkese eşit davranırız.</span>
-          </span>
-        </a>
-        <a class="tile reveal" href="ilk-adim-programi/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/ilk-adim-600.webp 600w, assets/img/ilk-adim-1200.webp 1200w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/ilk-adim-1200.jpg" width="1200" height="1244" alt="" loading="lazy" decoding="async"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">İlk Adım Programı</span>
-            <span class="tile-text">Şirketimizi ve inşaat sektörünü yakından tanımak isteyenler için staj programı.</span>
-          </span>
-        </a>
-        <a class="tile reveal" href="is-basvurusu/index.html">
-          <span class="tile-img"><picture>
-            <source type="image/webp" srcset="assets/img/insan-kaynaklari-600.webp 600w, assets/img/insan-kaynaklari-1200.webp 1200w" sizes="(min-width: 1120px) 360px, (min-width: 700px) 50vw, 100vw">
-            <img src="assets/img/insan-kaynaklari-1200.jpg" width="1200" height="1244" alt="" loading="lazy" decoding="async"></picture></span>
-          <span class="tile-body">
-            <span class="tile-title">İnsan kaynakları</span>
-            <span class="tile-text">Açık pozisyonlara başvurun ya da genel başvurunuzu bırakın.</span>
-          </span>
-        </a>
-      </div>
+      <ol class="haber-list">
+        <li><article>
+          <p class="haber-meta"><time datetime="2026-11-12">12 Kasım 2026</time><span>Şantiye</span></p>
+          <h3>AND Pastel'de kaba inşaat son bloğa ulaştı</h3>
+          <p>Altı bloktan beşinde betonarme tamamlandı. Cephe montajı ilk iki blokta başladı; teras bahçelerin zemin hazırlığı sürüyor.</p>
+        </article></li>
+        <li><article>
+          <p class="haber-meta"><time datetime="2026-10-28">28 Ekim 2026</time><span>Sürdürülebilirlik</span></p>
+          <h3>Nevayalı'da hafriyatın yüzde 80'i yeniden kullanıldı</h3>
+          <p>Kazıdan çıkan malzeme elenerek dolgu ve peyzaj katmanlarında değerlendirildi. Şantiyeden çıkan kamyon seferi yarıya indi.</p>
+        </article></li>
+        <li><article>
+          <p class="haber-meta"><time datetime="2026-10-03">3 Ekim 2026</time><span>Kariyer</span></p>
+          <h3>İlk Adım Programı 2027 başvuruları açıldı</h3>
+          <p>İnşaat, mimarlık ve makine mühendisliği öğrencileri için sekiz haftalık şantiye ve ofis stajı. Son başvuru 15 Ocak.</p>
+        </article></li>
+      </ol>
     </div>
   </section>
 
-  <!-- Birlikte çalıştığımız firmalar -->
-  <section class="section" aria-labelledby="ortaklar">
+  <section class="section degerler on-dark" aria-labelledby="deger-baslik">
     <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="ortaklar" class="section-title">Birlikte çalıştığımız firmalar.</h2>
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="deger-baslik">Değerlerimiz</h2></div>
       </div>
-      <ul class="partners reveal">
-        <li translate="no">Tepe İnşaat</li>
-        <li translate="no">Ağaoğlu</li>
-        <li translate="no">Rönesans</li>
-        <li translate="no">Koray Group</li>
-        <li translate="no">AND Gayrimenkul</li>
-        <li translate="no">İTÜ Teknokent</li>
+      <div class="deger-grid">
+        <div class="deger"><h3>Doğa</h3><p>Doğanın en önemli parçamız olduğunu unutmuyoruz.</p></div>
+        <div class="deger"><h3>Uyum</h3><p>Yaşamın harmonisi ile entegre projeler üretiyoruz.</p></div>
+        <div class="deger"><h3>Kökler</h3><p>Arel Yapı olarak gücümüzü köklerimizden alıyoruz.</p></div>
+      </div>
+      <dl class="rakamlar">
+        <div><dd>%32</dd><dt>Şantiye atığında azalma, 2020'ye göre</dt></div>
+        <div><dd>2</dd><dt>LEED sertifikalı proje</dt></div>
+        <div><dd>1,8 milyon</dd><dt>Kayıp günlü kazasız adam-saat</dt></div>
+      </dl>
+      <a class="link" href="https://www.arelyapi.net/degerlerimiz/">Değerlerimizi okuyun</a>
+    </div>
+  </section>
+
+  <section class="section ortaklar" aria-labelledby="ortak-baslik">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="ortak-baslik">Birlikte çalıştığımız firmalar</h2></div>
+      </div>
+      <ul>
+        <li>Tepe İnşaat</li>
+        <li>Ağaoğlu</li>
+        <li>Rönesans</li>
+        <li>Koray Group</li>
+        <li>AND Gayrimenkul</li>
+        <li>İTÜ Teknokent</li>
       </ul>
-      <p class="partners-note">Projelerimizde iş birliği yaptığımız firmalardan bazıları.</p>
+      <p class="not">Projelerimizde iş birliği yaptığımız firmalardan bazıları.</p>
+    </div>
+  </section>
+
+  <section class="section kariyer" id="kariyer" aria-labelledby="kariyer-baslik">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="title"><span class="kat" aria-hidden="true"></span><h2 id="kariyer-baslik">Kariyer</h2></div>
+        <a class="btn btn-ghost" href="https://www.arelyapi.net/is-basvurusu/">İş başvurusu yapın</a>
+      </div>
+      <div class="kariyer-grid">
+        <a class="kariyer-item" href="https://www.arelyapi.net/ilk-adim-programi/">
+          <figure><picture><source type="image/webp" srcset="assets/img/ilk-adim-600.webp 600w, assets/img/ilk-adim-1200.webp 1200w" sizes="(max-width: 1020px) 140px, 33vw"><img src="assets/img/ilk-adim-1200.jpg" width="1200" height="1244" alt="" loading="lazy"></picture></figure>
+          <h3>Öğrenciler</h3>
+          <p>İlk Adım Programı: sekiz haftalık şantiye ve ofis stajı. Her stajyere bir mentor eşlik eder.</p>
+        </a>
+        <a class="kariyer-item" href="https://www.arelyapi.net/is-basvurusu/">
+          <figure><picture><source type="image/webp" srcset="assets/img/firsat-esitligi-600.webp 600w, assets/img/firsat-esitligi-1200.webp 1200w" sizes="(max-width: 1020px) 140px, 33vw"><img src="assets/img/firsat-esitligi-1200.jpg" width="1200" height="1244" alt="" loading="lazy"></picture></figure>
+          <h3>Yeni mezunlar</h3>
+          <p>İlk iki yılda şantiye, planlama ve satın alma arasında rotasyon. Fırsat eşitliği ilkemizdir.</p>
+        </a>
+        <a class="kariyer-item" href="https://www.arelyapi.net/is-basvurusu/">
+          <figure><picture><source type="image/webp" srcset="assets/img/insan-kaynaklari-600.webp 600w, assets/img/insan-kaynaklari-1200.webp 1200w" sizes="(max-width: 1020px) 140px, 33vw"><img src="assets/img/insan-kaynaklari-1200.jpg" width="1200" height="1244" alt="" loading="lazy"></picture></figure>
+          <h3>Deneyimli profesyoneller</h3>
+          <p>Şantiye şefliği, proje yönetimi ve teknik ofis için açık pozisyonlar ve genel başvuru.</p>
+        </a>
+      </div>
+      <div class="ekip-video">
+        <span class="oynat" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3l11 7-11 7z" fill="currentColor"/></svg></span>
+        <p><strong>Ekipten hikâyeler.</strong> Şantiye ve ofis ekibiyle kısa videolar çekimden sonra burada yer alacak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section iletisim on-dark" id="iletisim" aria-labelledby="iletisim-baslik">
+    <div class="wrap iletisim-grid">
+      <div class="iletisim-sol">
+        <h2 id="iletisim-baslik">Projenizi konuşalım.</h2>
+        <address>
+          <a class="tel" href="tel:+902166871596">+90 216 687 15 96</a>
+          <p class="adres">İçerenköy Mah. Umut Sok. Quick Tower No:10-12, Kat 16-18, Ataşehir / İstanbul</p>
+          <div class="actions">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Quick+Tower+Ata%C5%9Fehir+%C4%B0stanbul" target="_blank" rel="noopener">Yol tarifi alın</a>
+          </div>
+        </address>
+        <ul class="kisiler" aria-label="Konuya göre ilgili kişiler">
+          <li><span class="avatar" aria-hidden="true">SA</span><div><strong>Selin Aydın</strong><span>İş Geliştirme Müdürü</span><span class="konu">Yeni proje ve teklif</span></div></li>
+          <li><span class="avatar" aria-hidden="true">MK</span><div><strong>Murat Kaya</strong><span>Satın Alma Müdürü</span><span class="konu">Tedarik ve iş ortaklığı</span></div></li>
+          <li><span class="avatar" aria-hidden="true">DA</span><div><strong>Deniz Arslan</strong><span>İnsan Kaynakları Uzmanı</span><span class="konu">Kariyer ve staj</span></div></li>
+        </ul>
+      </div>
+      <form class="talep" id="talep" novalidate>
+        <h3>Proje talebi</h3>
+        <div class="alan"><label for="f-ad">Adınız soyadınız</label><input id="f-ad" name="ad" type="text" autocomplete="name" required></div>
+        <div class="alan"><label for="f-firma">Firma</label><input id="f-firma" name="firma" type="text" autocomplete="organization"></div>
+        <div class="alan"><label for="f-eposta">E-posta</label><input id="f-eposta" name="eposta" type="email" autocomplete="email" required></div>
+        <div class="alan"><label for="f-tur">Proje türü</label>
+          <select id="f-tur" name="tur"><option>Ofis</option><option>Konut</option><option>Ticari</option><option>Endüstriyel</option><option>Karma kullanım</option><option>Diğer</option></select></div>
+        <div class="alan genis"><label for="f-mesaj">Projenizi kısaca anlatın</label><textarea id="f-mesaj" name="mesaj" rows="4" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Talebi gönderin</button>
+        <p class="form-durum" id="form-durum" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer on-dark">
   <div class="wrap">
-    <img class="logo" src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo@2x.png 2x" width="94" height="28" alt="Arel Yapı" loading="lazy">
-    <div class="foot-grid">
-      <div><h2>Kurumsal</h2><a href="about-us/index.html">Hakkımızda</a><a href="about-us/vizyon-misyon/index.html">Vizyon ve misyon</a><a href="kalite-yonetimi/index.html">Kalite yönetimi</a><a href="degerlerimiz/index.html">Değerlerimiz</a></div>
-      <div><h2>Projeler</h2><a href="tamamlanan-projeler/index.html">Tamamlanan</a><a href="devam-eden-projeler/index.html">Devam eden</a><a href="yatirim-projeleri/index.html">Yatırım</a><a href="galeri/index.html">Galeri</a></div>
-      <div><h2>Sürdürülebilirlik</h2><a href="surdurulebilirlik/index.html">Sürdürülebilirlik</a><a href="is-guvenligi/index.html">İş güvenliği</a><a href="cevre-politikasi/index.html">Çevre politikası</a><a href="firsat-esitligi/index.html">Fırsat eşitliği</a></div>
-      <div><h2>İletişim</h2>
-        <address>İçerenköy Mah. Umut Sok. Quick Tower No:10-12, Kat 16-18, Ataşehir / İstanbul</address>
-        <a href="tel:+902166871596">+90 216 687 15 96</a>
-        <!-- [Eksik: e-posta adresi] Sitede gizli olduğu için okunamadı. Ekleyin: <a href="mailto:...">...</a> -->
-        <div class="foot-social"><a href="https://www.instagram.com/arelyapi_/" rel="noopener">Instagram</a><a href="https://tr.linkedin.com/company/arelyapi" rel="noopener">LinkedIn</a></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo@2x.png 2x" width="320" height="95" alt="Arel Yapı" loading="lazy">
+        <p>Hayata değer katan, değerleri önemsiyoruz.</p>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <ul>
+          <li><a href="https://www.arelyapi.net/about-us/">Hakkımızda</a></li>
+          <li><a href="https://www.arelyapi.net/about-us/vizyon-misyon/">Vizyon ve misyon</a></li>
+          <li><a href="https://www.arelyapi.net/kalite-yonetimi/">Kalite yönetimi</a></li>
+          <li><a href="https://www.arelyapi.net/degerlerimiz/">Değerlerimiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Projeler</h2>
+        <ul>
+          <li><a href="galeri/index.html?durum=tamamlanan">Tamamlanan</a></li>
+          <li><a href="galeri/index.html?durum=devam">Devam eden</a></li>
+          <li><a href="https://www.arelyapi.net/yatirim-projeleri/">Yatırım</a></li>
+          <li><a href="galeri/index.html">Galeri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Sürdürülebilirlik</h2>
+        <ul>
+          <li><a href="https://www.arelyapi.net/surdurulebilirlik/">Sürdürülebilirlik</a></li>
+          <li><a href="https://www.arelyapi.net/is-guvenligi/">İş güvenliği</a></li>
+          <li><a href="https://www.arelyapi.net/cevre-politikasi/">Çevre politikası</a></li>
+          <li><a href="https://www.arelyapi.net/firsat-esitligi/">Fırsat eşitliği</a></li>
+        </ul>
       </div>
     </div>
-    <div class="foot-bottom"><span>© <span id="yil">2026</span> Arel Yapı. Tüm hakları saklıdır.</span><span>Hayata değer katan, değerleri önemsiyoruz.</span></div>
+    <ul class="rozetler" aria-label="Sertifikalar">
+      <li>LEED Platinum</li><li>LEED Silver</li><li>ISO 9001</li><li>ISO 14001</li><li>ISO 45001</li>
+    </ul>
+    <div class="footer-alt">
+      <p>© <span data-year>2026</span> Arel Yapı. Tüm hakları saklıdır.</p>
+      <ul>
+        <li><a href="https://www.instagram.com/arelyapi_/" rel="noopener">Instagram</a></li>
+        <li><a href="https://tr.linkedin.com/company/arelyapi" rel="noopener">LinkedIn</a></li>
+        <li><a href="panel/index.html">Yönetim paneli</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
-<script src="assets/js/site.js" defer></script>
-<script src="assets/js/anasayfa.js" defer></script>
+<script src="assets/js/projeler.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/anasayfa.js"></script>
 </body>
 </html>

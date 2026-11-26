@@ -1,36 +1,56 @@
-/* Arel Yapı — her sayfada çalışan ortak davranışlar:
-   mobil menü, yıl, görsel açılmazsa yer tutucu. */
+/* Arel Yapı — ortak davranışlar: mobil menü, header çizgisi, yıl, sayılar, kırık görsel yedeği */
 (function () {
   "use strict";
 
-  // Mobil menü
+  /* Görsel yüklenemezse: kat çizgili lacivert blok + proje adı */
+  window.arelGuard = function (img, label) {
+    function fail() {
+      var box = img.closest("figure") || img.parentNode;
+      if (!box || box.querySelector(".img-fallback")) return;
+      var pic = img.closest("picture");
+      (pic || img).style.visibility = "hidden";
+      var f = document.createElement("div");
+      f.className = "img-fallback";
+      f.setAttribute("role", "img");
+      f.setAttribute("aria-label", (label || img.alt || "Proje") + " görseli yüklenemedi");
+      f.textContent = label || "";
+      box.appendChild(f);
+    }
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) fail();
+    else img.addEventListener("error", fail, { once: true });
+  };
+  document.querySelectorAll("figure img").forEach(function (img) { window.arelGuard(img); });
+
+  /* Mobil menü */
   var btn = document.querySelector(".menu-btn");
-  var menu = document.getElementById("mobil-menu");
-  if (btn && menu) {
+  var nav = document.getElementById("ana-menu");
+  if (btn && nav) {
     var setOpen = function (open) {
+      nav.classList.toggle("open", open);
       btn.setAttribute("aria-expanded", String(open));
       btn.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
-      menu.hidden = !open;
     };
-    btn.addEventListener("click", function () { setOpen(btn.getAttribute("aria-expanded") !== "true"); });
+    btn.addEventListener("click", function () { setOpen(!nav.classList.contains("open")); });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") { setOpen(false); btn.focus(); }
+      if (e.key === "Escape" && nav.classList.contains("open")) { setOpen(false); btn.focus(); }
     });
-    window.matchMedia("(min-width: 821px)").addEventListener("change", function (m) { if (m.matches) setOpen(false); });
   }
 
-  // Yıl
-  var year = document.getElementById("yil");
-  if (year) year.textContent = new Date().getFullYear();
+  /* Kaydırınca header altına çizgi */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
 
-  // Görsel açılmazsa .media kutusunda lacivert yer tutucu göster
-  window.arelGuard = function (img) {
-    if (!img) return;
-    var box = img.closest(".media");
-    if (!box) return;
-    img.addEventListener("error", function () { box.classList.add("is-broken"); });
-    img.addEventListener("load", function () { box.classList.remove("is-broken"); });
-    if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) box.classList.add("is-broken");
-  };
-  Array.prototype.forEach.call(document.querySelectorAll(".media img"), window.arelGuard);
+  /* Yıl ve proje sayıları */
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  var projects = window.AREL_PROJECTS || [];
+  document.querySelectorAll("[data-count]").forEach(function (el) {
+    var key = el.getAttribute("data-count");
+    var n = projects.filter(function (p) { return p.status === key; }).length;
+    if (n) el.textContent = n;
+  });
 })();

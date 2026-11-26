@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yönetim paneli | Arel Yapı</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#061A38">
+<link rel="icon" href="https://arelyapi.net/wp-content/uploads/2025/02/cropped-1-fotor-bg-remover-2025022414462-270x270.png">
+<link rel="preload" href="../assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/arel.css">
+<link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body class="panel-body" data-root="../">
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<p class="demo-bant">Demo panel: veriler kurgudur, değişiklikler yalnızca bu tarayıcıda saklanır ve siteye yansımaz.</p>
+
+<div class="panel">
+  <aside class="p-yan on-dark">
+    <a class="p-logo" href="../index.html" aria-label="Arel Yapı sitesine dön"><img src="../assets/img/logo@2x.png" width="320" height="95" alt="Arel Yapı"></a>
+    <nav aria-label="Panel bölümleri">
+      <ul id="p-nav">
+        <li><button type="button" data-tab="genel" aria-current="page">Genel bakış</button></li>
+        <li data-mod="projeler"><button type="button" data-tab="projeler">Projeler</button></li>
+        <li data-mod="talepler"><button type="button" data-tab="talepler">Talepler <span class="rozet" id="n-talep"></span></button></li>
+        <li data-mod="haberler"><button type="button" data-tab="haberler">Şantiyeden</button></li>
+        <li data-mod="otomasyon"><button type="button" data-tab="otomasyon">Otomasyonlar</button></li>
+        <li><button type="button" data-tab="ayarlar">Paneli düzenle</button></li>
+      </ul>
+    </nav>
+    <p class="p-not">Bu panel bir taslaktır. Bölümler ve otomasyonlar Arel Yapı'nın iş akışına göre eklenir, çıkarılır.</p>
+    <a class="p-don" href="../index.html">Siteye dön</a>
+  </aside>
+
+  <main id="icerik" class="p-ana">
+
+    <section id="tab-genel" class="p-tab" aria-labelledby="h-genel">
+      <h1 id="h-genel">Genel bakış</h1>
+      <dl class="p-kutular" id="kutular"></dl>
+      <div class="p-iki">
+        <div class="p-kart"><h2>Son talepler</h2><ul class="p-liste" id="son-talepler"></ul></div>
+        <div class="p-kart"><h2>Çalışan otomasyonlar</h2><ul class="p-liste" id="aktif-oto"></ul></div>
+      </div>
+    </section>
+
+    <section id="tab-projeler" class="p-tab" hidden aria-labelledby="h-projeler">
+      <div class="p-bas"><h1 id="h-projeler">Projeler</h1><button class="btn btn-primary" type="button" id="proje-ekle">Proje ekleyin</button></div>
+      <p class="p-acik">Sitedeki proje listesi, galeri ve sayılar bu tablodan beslenir.</p>
+      <div class="p-tablo-sar"><table class="p-tablo">
+        <thead><tr><th scope="col">Proje</th><th scope="col">Tür</th><th scope="col">Konum</th><th scope="col">Durum</th><th scope="col"><span class="visually-hidden">İşlem</span></th></tr></thead>
+        <tbody id="proje-govde"></tbody>
+      </table></div>
+    </section>
+
+    <section id="tab-talepler" class="p-tab" hidden aria-labelledby="h-talepler">
+      <h1 id="h-talepler">Talepler</h1>
+      <p class="p-acik">Sitedeki "Proje talebi" formundan gelen başvurular. Durumu değiştirerek takip edin.</p>
+      <div class="p-tablo-sar"><table class="p-tablo">
+        <thead><tr><th scope="col">Tarih</th><th scope="col">Kişi</th><th scope="col">Tür</th><th scope="col">Mesaj</th><th scope="col">Durum</th></tr></thead>
+        <tbody id="talep-govde"></tbody>
+      </table></div>
+    </section>
+
+    <section id="tab-haberler" class="p-tab" hidden aria-labelledby="h-haberler">
+      <h1 id="h-haberler">Şantiyeden</h1>
+      <p class="p-acik">Anasayfadaki haber akışı. Yayından kaldırılan haber sitede görünmez.</p>
+      <form class="p-form" id="haber-form">
+        <div class="alan genis"><label for="h-baslik">Başlık</label><input id="h-baslik" type="text" required></div>
+        <div class="alan"><label for="h-kat">Kategori</label><select id="h-kat"><option>Şantiye</option><option>Sürdürülebilirlik</option><option>Kariyer</option><option>Kurumsal</option></select></div>
+        <button class="btn btn-primary" type="submit">Haberi ekleyin</button>
+      </form>
+      <ul class="p-liste buyuk" id="haber-liste"></ul>
+    </section>
+
+    <section id="tab-otomasyon" class="p-tab" hidden aria-labelledby="h-otomasyon">
+      <h1 id="h-otomasyon">Otomasyonlar</h1>
+      <p class="p-acik">Tekrar eden işleri panel üstlenir. Aşağıdakiler örnektir; ihtiyacınız olan akışı tarif edin, TwoFold yazsın.</p>
+      <ul class="p-oto" id="oto-liste"></ul>
+      <form class="p-form tek" id="oto-form">
+        <h2>Yeni otomasyon isteyin</h2>
+        <div class="alan genis"><label for="o-istek">Hangi işi otomatikleştirmek istiyorsunuz?</label><textarea id="o-istek" rows="3" required placeholder="Örnek: Hakediş onaylandığında muhasebeye e-posta gitsin."></textarea></div>
+        <button class="btn btn-primary" type="submit">İsteği kaydedin</button>
+      </form>
+      <div class="p-kart" id="istek-kart" hidden><h2>İstenen otomasyonlar</h2><ul class="p-liste" id="istek-liste"></ul></div>
+    </section>
+
+    <section id="tab-ayarlar" class="p-tab" hidden aria-labelledby="h-ayarlar">
+      <h1 id="h-ayarlar">Paneli düzenle</h1>
+      <p class="p-acik">Kullanmadığınız bölümleri kapatın. Yeni bölümler (hakediş, tedarikçi, şantiye raporu gibi) talebe göre eklenir.</p>
+      <fieldset class="p-kart p-mod"><legend>Görünen bölümler</legend><div id="mod-liste"></div></fieldset>
+      <button class="btn btn-ghost" type="button" id="sifirla">Demo verisini sıfırlayın</button>
+      <p class="form-durum" id="p-durum" role="status" aria-live="polite"></p>
+    </section>
+
+  </main>
+</div>
+
+<dialog class="p-dlg" id="proje-dlg" aria-labelledby="dlg-baslik">
+  <form method="dialog" id="proje-form" class="p-form">
+    <h2 id="dlg-baslik">Proje</h2>
+    <div class="alan genis"><label for="p-ad">Proje adı</label><input id="p-ad" type="text" required></div>
+    <div class="alan genis"><label for="p-claim">Kart başlığı (projenin özelliği)</label><input id="p-claim" type="text"></div>
+    <div class="alan"><label for="p-tur">Tür</label><select id="p-tur"><option>Ofis</option><option>Konut</option><option>Ticari</option><option>Endüstriyel</option><option>Karma kullanım</option><option>Teknopark</option></select></div>
+    <div class="alan"><label for="p-durum-s">Durum</label><select id="p-durum-s"><option value="tamamlanan">Tamamlandı</option><option value="devam">Devam ediyor</option></select></div>
+    <div class="alan"><label for="p-konum">Konum</label><input id="p-konum" type="text"></div>
+    <div class="alan"><label for="p-ortak">İş ortağı</label><input id="p-ortak" type="text"></div>
+    <div class="p-dlg-alt"><button class="btn btn-ghost" type="button" id="dlg-vazgec">Vazgeçin</button><button class="btn btn-primary" type="submit">Kaydedin</button></div>
+  </form>
+</dialog>
+
+<script src="../assets/js/projeler.js"></script>
+<script src="../assets/js/panel.js"></script>
+</body>
+</html>

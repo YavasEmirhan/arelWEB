@@ -105,3 +105,31 @@ window.AREL_PROJECTS = (function () {
     }
   ];
 })();
+
+/* DEMO ZENGİNLEŞTİRME — aşağıdaki "kurgu" alanları gerçek veri değildir.
+   claim: kart başlığı (sitedeki gerçek bilgilerden türetildi)
+   credit, year, area ve boş konum/ortak alanları: KURGU; Arel'den gelen bilgiyle değiştirilecek. */
+(function () {
+  var X = {
+    "kristal-kule":      { claim: "35. katta skygarden, açılır kapanır çatı", year: "2014", area: "110.000 m²" },
+    "and-pastel":        { claim: "Kartal'da yeni nesil mahalle", year: "2027 (hedef)", area: "240.000 m²" },
+    "nevayali":          { claim: "Şehrin merkezinde, doğayla iç içe", year: "2028 (hedef)", area: "95.000 m²" },
+    "and-plaza":         { claim: "73.325 m², LEED Platinum A+ ofis", year: "2016" },
+    "maslak-1453":       { claim: "1.453 metrelik bir cadde", year: "2017", area: "1.200.000 m²" },
+    "itu-ari-teknokent": { claim: "Araştırmanın ürüne dönüştüğü yer", year: "2012", area: "48.000 m²" },
+    "ferrero":           { claim: "Sismik izolatörlü fındık fabrikası", year: "2013", area: "36.000 m²", location: "Manisa" },
+    "narcity":           { claim: "Bölgenin ilk ve en büyük toplu konutu", year: "2010", area: "320.000 m²", location: "Maltepe, İstanbul" },
+    "cekmekoy-park":     { claim: "Yeşilin içinde konut", year: "2011", area: "85.000 m²" },
+    "bayrampasa-ikea":   { claim: "30.000 m² tek mağaza", year: "2007" },
+    "mayavera":          { claim: "Altı villa tipi, tek peyzaj", year: "2009", area: "22.000 m²", location: "Ömerli, İstanbul", partner: "Maya" },
+    "gebze-center":      { claim: "130 mağaza, 66.072 m²", year: "2010", partner: "Örnek Yatırım A.Ş." }
+  };
+  window.AREL_PROJECTS.forEach(function (p) {
+    var x = X[p.id]; if (!x) return;
+    p.claim = x.claim;
+    if (!p.location && x.location) p.location = x.location;
+    if (!p.partner && x.partner) p.partner = x.partner;
+    p.credit = (p.partner || "Arel Yapı") + " arşivi";
+    p.specs = (p.specs || []).concat([["Teslim", x.year]], x.area ? [["İnşaat alanı", x.area]] : []);
+  });
+})();
