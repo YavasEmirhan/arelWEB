@@ -37,17 +37,14 @@
   var img = box.querySelector("img");
 
   function show(a) {
-    if (!fine.matches || calm.matches) return;
     var src = a.getAttribute("data-img");
     if (img.getAttribute("src") !== src) img.setAttribute("src", src);
-    var r = a.getBoundingClientRect(), w = wrap.getBoundingClientRect();
-    box.style.top = (r.top - w.top + r.height / 2 - 112) + "px";
-    box.style.left = (w.width * 0.56) + "px";
     box.classList.add("on");
   }
   img.addEventListener("error", function () { box.classList.remove("on"); });
   list.addEventListener("mouseover", function (e) { var a = e.target.closest("a"); if (a) show(a); });
-  list.addEventListener("mouseleave", function () { box.classList.remove("on"); });
+  list.addEventListener("focusin", function (e) { var a = e.target.closest("a"); if (a) show(a); });
+  var ilk = list.querySelector("a"); if (ilk) show(ilk);
 })();
 
 /* Sektör girişi: türler projeler.js'ten; her kart galeride o türü açar */
@@ -80,7 +77,7 @@
   "use strict";
   var el = document.getElementById("doner"), btn = document.getElementById("doner-btn");
   if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var WORDS = ["ofisler", "konutlar", "fabrikalar", "alışveriş merkezleri", "teknoparklar"], i = 0, timer = null;
+  var WORDS = ["ofisler", "konutlar", "fabrikalar", "kuleler", "mahalleler"], i = 0, timer = null;
   function next() {
     el.classList.add("cik");
     setTimeout(function () { i = (i + 1) % WORDS.length; el.textContent = WORDS[i]; el.classList.remove("cik"); }, 260);

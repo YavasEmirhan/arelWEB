@@ -1,4 +1,4 @@
-# Arel Yapı — Anasayfa ve Galeri (v2)
+# Arel Yapı — Anasayfa, Galeri ve Panel (v5)
 
 arelyapi.net için yeniden tasarlanan anasayfa ve Galeri sayfası. Tasarım "Arel Yapı" marka kılavuzuna (Design System) bağlıdır. Saf HTML, CSS ve JavaScript; derleme adımı veya bağımlılık yok.
 
@@ -47,3 +47,7 @@ Sayfanın üstündeki şerit bunun demo olduğunu söyler. Yayına almadan önce
 ## Yönetim paneli (demo)
 
 `/panel/` adresinde açılır. Giriş ekranı ve sunucu yoktur: veriler tarayıcıda (localStorage) tutulur, siteye yansımaz, arama motorlarına kapalıdır (noindex). Bölümler: Genel bakış, Projeler, Talepler, Şantiyeden, Otomasyonlar, Paneli düzenle. Gerçek sürümde giriş (kullanıcı/şifre), veritabanı ve otomasyonların arka ucu eklenir; `panel.js` içindeki `defaults()` verisi API'den gelir.
+
+## v5 düzeni
+
+Kimlik aynı (marka kılavuzundaki renk ve fontlar), düzen yeni: koyu header; hero'da fotoğraf logodaki çizgili üçgenin içinden görünür ve alttan yükselir; sayfa gece laciverti ve taş bantları arasında ilerler; projeler koyu bantta büyük dizin ve yapışkan önizlemeyle. Stiller `arel.css` içinde "11. v5 düzeni" bölümündedir.
